@@ -129,7 +129,7 @@ Great -- we can now display a list of breweries.  Let's further abstract some lo
 
 Nice!  But what if we want to get something _out of_ the component.  We can use `@Output()` for that.  An output will be (in Angular terms) an `EventEmitter`.  Let's add an output to the `brewery-list-item` called `toggleSave` -- it should be of type `EventEmitter`, which is generic.  What type do you think it should be?
 
-Now that we have added an `Output` to the `brewery-list-item`, we can wire that up inside of `brewery-list`.  Create a field called `onSave` inside of `brewery-list`.  For now, let's just have it do a simple `console.log`.  Set `(save)` on each `brewery-list-item` to `onToggleSave($event)` and give it a try.  Do you see the `console` logging your output?
+Now that we have added an `Output` to the `brewery-list-item`, we can wire that up inside of `brewery-list`.  Create a field called `onToggleSave` inside of `brewery-list`.  For now, let's just have it do a simple `console.log`.  Set `(toggleSave)` on each `brewery-list-item` to `onToggleSave($event)` and give it a try.  Do you see the `console` logging your output?
 
 Well, now that we are attempting to `save` breweries to our favorite list, we'll need some place in which to save them.  We can use a service for that.  Go ahead and create a service called `brewery` in the CLI.  That should create `BreweryService`.  Let's have `BreweryService` track a field called `favorites`.  What type should that be?
 

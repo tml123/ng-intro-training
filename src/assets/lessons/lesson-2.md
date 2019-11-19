@@ -135,10 +135,8 @@ Well, now that we are attempting to `save` breweries to our favorite list, we'll
 
 Add a method to `BreweryService` called `add`, which should take an argument called `brewery`.  Add another method called `remove`.  I'm sure you can guess what that should do.  Solid.  Now, let's connect the methods in `BreweryService` with the `brewery-list`'s method, `onToggleSave`.  We should see that the selected brewery is saved when it is not in the list or that it is removed when it is already in the list.
 
-For our final item this round, create a component called `favorite-breweries`.  Let's make that display a list of our favorite breweries.  But, how do we get there?
+For our final item this round, create a component called `favorite-breweries`.  Let's make that display a list of our favorite breweries (hint: you can reuse the `brewery-list-item` component).  But, how do we get there?  With what do you need to inject the `favorite-breweries` component?
 
 Open the `app.routing.module.ts` file.  We'll add a route to the module with a `path` of `favorites`, which will render the `FavoriteBreweriesComponent`.  When you navigate to `/favorites`, you should see a list of your favorite breweries!
 
 Next, we'll refactor this application a bit for a better UI/UX.
-
-<a href="/lesson-3.md">Next Lesson</a>
